@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pfInventory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body class="nav-wrapper deep-purple lighten-5">
+    <nav>
+        <div class="nav-wrapper deep-purple lighten-2">
+            <a href="#" class = "brand-logo grey-text text-lighten-3" style = "font-family:'Trebuchet MS'">P O C K E T</a>
+            <ul id="nav-mobile" class="right hide-o`n-med-and-down ">
+                <li><a href="index.html" class = "grey-text text-lighten-3" style = "font-family:'Trebuchet MS'; font-size:20px">Home</a></li>
+                <li><a href="items.html" class = "grey-text text-lighten-3" style = "font-family:'Trebuchet MS'; font-size:20px">Frogs</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="section" id="section1" style="display:none">
+            <h1 class = "center grey-text text-darken-2" style = "font-family:'Trebuchet MS'">Item Details:</h1>
+            <table>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Breed:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">Adamantis</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Base Color:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">Emerald</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Secondary Color:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">Folium</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Rarity:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">Common</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Quantity:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">5</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Description:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">
+                        The Adamantis pattern consists of three connected vertical diamonds down the frog's back in the secondary color, and the rest of the body in the base color. The center diamond is slightly larger than those above and below it and is more square-like in shape.
+                    </td>
+                </tr>
+            </table>
+            <div style="padding-top:20px">
+                <div style="padding-left:700px">
+                    <a class="btn deep-purple lighten-2 grey-text text-lighten-3 modal-trigger" href="#edit1" style = "font-family:'Courier'; font-size:20px">
+                        <i class="material-icons right">edit</i>
+                        Edit
+                    </a>
+                    <a class="btn deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:20px">
+                        <i class="material-icons right">delete</i>
+                        Delete
+                    </a>
+                </div>
+                    <a class="btn-large deep-purple lighten-2 grey-text text-lighten-3" href="items.html" style = "font-family:'Courier'; font-size:20px">
+                        <i class="material-icons left">arrow_back</i>
+                        Back to Inventory!
+                    </a>
+            </div>
+            <div class="modal" id="edit1">
+                <div class="modal-content">
+                    <h2 class = "center grey-text text-darken-2" style = "font-family:'Trebuchet MS'">Edit Frog:</h2>
+                    <form>
+                        <div class="row">
+                            <div class="input-field col s4">
+                                <label for="breedInput" style = "font-family:'Courier'">Breed:</label>
+                                <input type="text" name="breed" id="breedInput" class="validate" value="Adamantis" data-length="32" required>
+                            </div>
+                            <div class="input-field col s4">
+                                <label for="baseInput" style = "font-family:'Courier'">Base Color:</label>
+                                <input type="text" name="base" id="baseInput" class="validate" value="Emerald" data-length="32" required>
+                            </div>
+                            <div class="input-field col s4">
+                                <label for="secondaryInput" style = "font-family:'Courier'">Secondary Color:</label>
+                                <input type="text" name="secondary" id="secondaryInput" class="validate" value="Folium" data-length="32" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <label for="rarityInput" style = "font-family:'Courier'">Rarity:</label>
+                                <input type="text" name="rarity" id="rarityInput" class="validate" value="Common" data-length="32" required>
+                            </div>
+                            <div class="input-field col s6">
+                                <label for="quantityInput" style = "font-family:'Courier'">Quantity:</label>
+                                <input type="number" name="quantity" id="quantityInput" value=5 class="validate" min=0 required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="descriptionInput" style = "font-family:'Courier'">Description:</label>
+                                <input type="text" name="description" id="descriptionInput" class="validate" value="The Adamantis pattern consists of three connected vertical diamonds down the frog's back in the secondary color, and the rest of the body in the base color. The center diamond is slightly larger than those above and below it and is more square-like in shape." data-length="32" required>
+                            </div>
+                        </div>
+                        <button class="btn-large waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:25px" type="submit">
+                            <i class="material-icons right">send</i>
+                            Submit
+                        </button>
+                    </form>
+                    <div style = "padding-left:600px">
+                        <a class="btn waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:20px" href="details.html">
+                            <i class="material-icons right">clear</i>
+                            Cancel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id = "section2" style="display:none"> 
+            <h1 class = "center grey-text text-darken-2" style = "font-family:'Trebuchet MS'">Item Details:</h1>
+            <table>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Breed:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">Dextera</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Base Color:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">Purple</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Secondary Color:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">Tingo</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Rarity:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">Rare</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Quantity:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">3</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Description:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">
+                        The Dextera is a POP (Previously Only Promotional) frog. It can currently only be obtained by purchasing it for 25 potions in the FrogMart (when available), or as a gift from another player. It can not be found in the Pond, in minigames, or in presents.
+                        These frogs have footprint-like blotches on either side of the body (including the front legs) extending inward. These blotches are in the pattern color while the rest of the body is solid in the base color.
+                    </td>
+                </tr>
+            </table>
+            <div style="padding-top:20px">
+                <div style="padding-left:700px">
+                    <a class="btn deep-purple lighten-2 grey-text text-lighten-3 modal-trigger" href="#edit2" style = "font-family:'Courier'; font-size:20px">
+                        <i class="material-icons right">edit</i>
+                        Edit
+                    </a>
+                    <a class="btn deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:20px">
+                        <i class="material-icons right">delete</i>
+                        Delete
+                    </a>
+                </div>
+                    <a class="btn-large deep-purple lighten-2 grey-text text-lighten-3" href="items.html" style = "font-family:'Courier'; font-size:20px">
+                        <i class="material-icons left">arrow_back</i>
+                        Back to Inventory!
+                    </a>
+            </div>
+            <div class="modal" id="edit2">
+                <div class="modal-content">
+                    <h2 class = "center grey-text text-darken-2" style = "font-family:'Trebuchet MS'">Edit Frog:</h2>
+                    <form>
+                        <div class="row">
+                            <div class="input-field col s4">
+                                <label for="breedInput" style = "font-family:'Courier'">Breed:</label>
+                                <input type="text" name="breed" id="breedInput" class="validate" value="Dextera" data-length="32" required>
+                            </div>
+                            <div class="input-field col s4">
+                                <label for="baseInput" style = "font-family:'Courier'">Base Color:</label>
+                                <input type="text" name="base" id="baseInput" class="validate" value="Purple" data-length="32" required>
+                            </div>
+                            <div class="input-field col s4">
+                                <label for="secondaryInput" style = "font-family:'Courier'">Secondary Color:</label>
+                                <input type="text" name="secondary" id="secondaryInput" class="validate" value="Tingo" data-length="32" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <label for="rarityInput" style = "font-family:'Courier'">Rarity:</label>
+                                <input type="text" name="rarity" id="rarityInput" class="validate" value="Rare" data-length="32" required>
+                            </div>
+                            <div class="input-field col s6">
+                                <label for="quantityInput" style = "font-family:'Courier'">Quantity:</label>
+                                <input type="number" name="quantity" id="quantityInput" value=3 class="validate" min=0 required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="descriptionInput" style = "font-family:'Courier'">Description:</label>
+                                <input type="text" name="description" id="descriptionInput" class="validate" value="The Dextera is a POP (Previously Only Promotional) frog. It can currently only be obtained by purchasing it for 25 potions in the FrogMart (when available), or as a gift from another player. It can not be found in the Pond, in minigames, or in presents. These frogs have footprint-like blotches on either side of the body (including the front legs) extending inward. These blotches are in the pattern color while the rest of the body is solid in the base color." data-length="32" required>
+                            </div>
+                        </div>
+                        <button class="btn-large waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:25px" type="submit">
+                            <i class="material-icons right">send</i>
+                            Submit
+                        </button>
+                    </form>
+                    <div style = "padding-left:600px">
+                        <a class="btn waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:20px" href="details.html">
+                            <i class="material-icons right">clear</i>
+                            Cancel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id = "section3" style="display:none">
+            <h1 class = "center grey-text text-darken-2" style = "font-family:'Trebuchet MS'">Item Details:</h1>
+            <table>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Breed:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">Pluma</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Base Color:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">Maroon</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Secondary Color:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">Albeo</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Rarity:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">Legendary</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Quantity:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">1</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Description:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">
+                        The Pluma's design has a gradient stripe pattern, with each stripe separated by a scalloped edge, closely resembling the Insero's pattern. The nose of the frog is the secondary color and the back of the frog is the base color.
+                    </td>
+                </tr>
+            </table>
+            <div style="padding-top:20px">
+                <div style="padding-left:700px">
+                    <a class="btn deep-purple lighten-2 grey-text text-lighten-3 modal-trigger" href="#edit3" style = "font-family:'Courier'; font-size:20px">
+                        <i class="material-icons right">edit</i>
+                        Edit
+                    </a>
+                    <a class="btn deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:20px">
+                        <i class="material-icons right">delete</i>
+                        Delete
+                    </a>
+                </div>
+                    <a class="btn-large deep-purple lighten-2 grey-text text-lighten-3" href="items.html" style = "font-family:'Courier'; font-size:20px">
+                        <i class="material-icons left">arrow_back</i>
+                        Back to Inventory!
+                    </a>
+            </div>
+            <div class="modal" id="edit3">
+                <div class="modal-content">
+                    <h2 class = "center grey-text text-darken-2" style = "font-family:'Trebuchet MS'">Edit Frog:</h2>
+                    <form>
+                        <div class="row">
+                            <div class="input-field col s4">
+                                <label for="breedInput" style = "font-family:'Courier'">Breed:</label>
+                                <input type="text" name="breed" id="breedInput" class="validate" value="Pluma" data-length="32" required>
+                            </div>
+                            <div class="input-field col s4">
+                                <label for="baseInput" style = "font-family:'Courier'">Base Color:</label>
+                                <input type="text" name="base" id="baseInput" class="validate" value="Maroon" data-length="32" required>
+                            </div>
+                            <div class="input-field col s4">
+                                <label for="secondaryInput" style = "font-family:'Courier'">Secondary Color:</label>
+                                <input type="text" name="secondary" id="secondaryInput" class="validate" value="Albeo" data-length="32" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <label for="rarityInput" style = "font-family:'Courier'">Rarity:</label>
+                                <input type="text" name="rarity" id="rarityInput" class="validate" value="Legendary" data-length="32" required>
+                            </div>
+                            <div class="input-field col s6">
+                                <label for="quantityInput" style = "font-family:'Courier'">Quantity:</label>
+                                <input type="number" name="quantity" id="quantityInput" value=1 class="validate" min=0 required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="descriptionInput" style = "font-family:'Courier'">Description:</label>
+                                <input type="text" name="description" id="descriptionInput" class="validate" value="The Pluma's design has a gradient stripe pattern, with each stripe separated by a scalloped edge, closely resembling the Insero's pattern. The nose of the frog is the secondary color and the back of the frog is the base color." data-length="32" required>
+                            </div>
+                        </div>
+                        <button class="btn-large waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:25px" type="submit">
+                            <i class="material-icons right">send</i>
+                            Submit
+                        </button>
+                    </form>
+                    <div style = "padding-left:600px">
+                        <a class="btn waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:20px" href="details.html">
+                            <i class="material-icons right">clear</i>
+                            Cancel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id = "section4" style="display:none">
+            <h1 class = "center grey-text text-darken-2" style = "font-family:'Trebuchet MS'">Item Details:</h1>
+            <table>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Breed:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">Viduo</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Base Color:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">Olive</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Secondary Color:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">Pruni</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Rarity:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">Rare</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Quantity:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">1</td>
+                </tr>
+                <tr>
+                    <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Description:</th>
+                    <td style = "font-family:'Courier'; font-size:15px">
+                        The pattern resembles the red marking on the back of a Black Widow spider. Frogs have an hourglass design in the center of the frog's back which is filled in with the pattern color. The rest of the frog's body is in the base color.
+                    </td>
+                </tr>
+            </table>
+            <div style="padding-top:20px">
+                <div style="padding-left:700px">
+                    <a class="btn deep-purple lighten-2 grey-text text-lighten-3 modal-trigger" href="#edit4" style = "font-family:'Courier'; font-size:20px">
+                        <i class="material-icons right">edit</i>
+                        Edit
+                    </a>
+                    <a class="btn deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:20px">
+                        <i class="material-icons right">delete</i>
+                        Delete
+                    </a>
+                </div>
+                    <a class="btn-large deep-purple lighten-2 grey-text text-lighten-3" href="items.html" style = "font-family:'Courier'; font-size:20px">
+                        <i class="material-icons left">arrow_back</i>
+                        Back to Inventory!
+                    </a>
+            </div>
+            <div class="modal" id="edit4">
+                <div class="modal-content">
+                    <h2 class = "center grey-text text-darken-2" style = "font-family:'Trebuchet MS'">Edit Frog:</h2>
+                    <form>
+                        <div class="row">
+                            <div class="input-field col s4">
+                                <label for="breedInput" style = "font-family:'Courier'">Breed:</label>
+                                <input type="text" name="breed" id="breedInput" class="validate" value="Viduo" data-length="32" required>
+                            </div>
+                            <div class="input-field col s4">
+                                <label for="baseInput" style = "font-family:'Courier'">Base Color:</label>
+                                <input type="text" name="base" id="baseInput" class="validate" value="Olive" data-length="32" required>
+                            </div>
+                            <div class="input-field col s4">
+                                <label for="secondaryInput" style = "font-family:'Courier'">Secondary Color:</label>
+                                <input type="text" name="secondary" id="secondaryInput" class="validate" value="Pruni" data-length="32" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <label for="rarityInput" style = "font-family:'Courier'">Rarity:</label>
+                                <input type="text" name="rarity" id="rarityInput" class="validate" value="Rare" data-length="32" required>
+                            </div>
+                            <div class="input-field col s6">
+                                <label for="quantityInput" style = "font-family:'Courier'">Quantity:</label>
+                                <input type="number" name="quantity" id="quantityInput" value=1 class="validate" min=0 required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="descriptionInput" style = "font-family:'Courier'">Description:</label>
+                                <input type="text" name="description" id="descriptionInput" class="validate" value="The pattern resembles the red marking on the back of a Black Widow spider. Frogs have an hourglass design in the center of the frog's back which is filled in with the pattern color. The rest of the frog's body is in the base color." data-length="32" required>
+                            </div>
+                        </div>
+                        <button class="btn-large waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:25px" type="submit">
+                            <i class="material-icons right">send</i>
+                            Submit
+                        </button>
+                    </form>
+                    <div style = "padding-left:600px">
+                        <a class="btn waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:20px" href="details.html">
+                            <i class="material-icons right">clear</i>
+                            Cancel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var section = localStorage.getItem('section');
+            if(section == 'section1') {
+                document.getElementById('section1').style.display = 'block';
+            }
+            else if(section == 'section2') {
+                document.getElementById('section2').style.display = 'block';
+            }
+            else if(section == 'section3') {
+                document.getElementById('section3').style.display = 'block';
+            }
+            else {
+                document.getElementById('section4').style.display = 'block';
+            }
+        </script>
+    </div>
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- initialize Materialize elements -->
+    <script> M.AutoInit();</script>
+</body>
+</html>

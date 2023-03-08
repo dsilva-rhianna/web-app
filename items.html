@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pfInventory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body class="nav-wrapper deep-purple lighten-5">
+    <nav>
+        <div class="nav-wrapper deep-purple lighten-2">
+          <a href="#" class = "brand-logo grey-text text-lighten-3" style = "font-family:'Trebuchet MS'">P O C K E T</a>
+          <ul id="nav-mobile" class="right hide-o`n-med-and-down ">
+            <li><a href="index.html" class = "grey-text text-lighten-3" style = "font-family:'Trebuchet MS'; font-size:20px">Home</a></li>
+            <li><a href="items.html" class = "grey-text text-lighten-3" style = "font-family:'Trebuchet MS'; font-size:20px">Frogs</a></li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container">
+        <div class="section">
+            <h1 class = "center grey-text text-darken-2" style = "font-family:'Trebuchet MS'">Inventory:</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Breed</th>
+                        <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Base Color</th>
+                        <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Secondary Color</th>
+                        <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Rarity</th>
+                        <th class = "grey-text text-darken-2" style = "font-family:'Trebuchet MS'; font-size:20px">Quantity</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style = "font-family:'Courier'; font-size:13px">Adamantis</td>
+                        <td style = "font-family:'Courier'; font-size:13px">Emerald</td>
+                        <td style = "font-family:'Courier'; font-size:13px">Folium</td>
+                        <td style = "font-family:'Courier'; font-size:13px">Common</td>
+                        <td style = "font-family:'Courier'; font-size:13px">5</td>
+                        <td>
+                            <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px" href="details.html" onclick="localStorage.setItem('section', 'section1')">
+                                <i class="material-icons right">edit</i>
+                                Info/Edit
+                            </a>
+                            <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px">
+                                <i class="material-icons right">delete</i>
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style = "font-family:'Courier'; font-size:13px">Dextera</td>
+                        <td style = "font-family:'Courier'; font-size:13px">Purple</td>
+                        <td style = "font-family:'Courier'; font-size:13px">Tingo</td>
+                        <td style = "font-family:'Courier'; font-size:13px">Rare</td>
+                        <td style = "font-family:'Courier'; font-size:13px">3</td>
+                        <td>
+                            <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px" href="details.html" onclick="localStorage.setItem('section', 'section2')">
+                                <i class="material-icons right">edit</i>
+                                Info/Edit
+                            </a>
+                            <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px">
+                                <i class="material-icons right">delete</i>
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style = "font-family:'Courier'; font-size:13px">Pluma</td>
+                        <td style = "font-family:'Courier'; font-size:13px">Maroon</td>
+                        <td style = "font-family:'Courier'; font-size:13px">Albeo</td>
+                        <td style = "font-family:'Courier'; font-size:13px">Legendary</td>
+                        <td style = "font-family:'Courier'; font-size:13px">1</td>
+                        <td>
+                            <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px" href="details.html" onclick="localStorage.setItem('section', 'section3')">
+                                <i class="material-icons right">edit</i>
+                                Info/Edit
+                            </a>
+                            <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px">
+                                <i class="material-icons right">delete</i>
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style = "font-family:'Courier'; font-size:13px">Viduo</td>
+                        <td style = "font-family:'Courier'; font-size:13px">Olive</td>
+                        <td style = "font-family:'Courier'; font-size:13px">Pruni</td>
+                        <td style = "font-family:'Courier'; font-size:13px">Rare</td>
+                        <td style = "font-family:'Courier'; font-size:13px">1</td>
+                        <td>
+                            <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px" href="details.html" onclick="localStorage.setItem('section', 'section4')">
+                                <i class="material-icons right">edit</i>
+                                Info/Edit
+                            </a>
+                            <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px">
+                                <i class="material-icons right">delete</i>
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class = "button" style = "padding-top:20px">
+                <a class="btn-large deep-purple lighten-2 grey-text text-lighten-3 modal-trigger" href="#add" style = "font-family:'Courier'; font-size:20px">
+                    <i class="material-icons right">add</i>
+                    Add Item
+                </a>
+            </div>
+            <div class="modal" id="add">
+                <div class="modal-content">
+                    <h2 class = "center grey-text text-darken-2" style = "font-family:'Trebuchet MS'">Add Frog:</h2>
+                    <form>
+                        <div class="row">
+                            <div class="input-field col s4">
+                                <label for="breedInput" style = "font-family:'Courier'">Breed:</label>
+                                <input type="text" name="breed" id="breedInput" class="validate" data-length="32" required>
+                            </div>
+                            <div class="input-field col s4">
+                                <label for="baseInput" style = "font-family:'Courier'">Base Color:</label>
+                                <input type="text" name="base" id="baseInput" class="validate" data-length="32" required>
+                            </div>
+                            <div class="input-field col s4">
+                                <label for="secondaryInput" style = "font-family:'Courier'">Secondary Color:</label>
+                                <input type="text" name="secondary" id="secondaryInput" class="validate" data-length="32" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <label for="rarityInput" style = "font-family:'Courier'">Rarity:</label>
+                                <input type="text" name="rarity" id="rarityInput" class="validate" data-length="32" required>
+                            </div>
+                            <div class="input-field col s6">
+                                <label for="quantityInput" style = "font-family:'Courier'">Quantity:</label>
+                                <input type="number" name="quantity" id="quantityInput" class="validate" min=0 required>
+                            </div>
+                        </div>
+                        <button class="btn-large waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:25px" type="submit">
+                            <i class="material-icons right">send</i>
+                            Submit
+                        </button>
+                    </form>
+                    <div style = "padding-left:600px">
+                        <a class="btn waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:20px" href="items.html">
+                            <i class="material-icons right">clear</i>
+                            Cancel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Materialize JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+     <!-- initialize Materialize elements -->
+     <script> M.AutoInit();</script>
+</body>
+</html>
