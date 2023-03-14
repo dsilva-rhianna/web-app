@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "name": "prototype",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsilva-rhianna/web-app-prototype.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsilva-rhianna/web-app-prototype/issues"
+  },
+  "homepage": "https://github.com/dsilva-rhianna/web-app-prototype#readme",
+  "description": ""
+}
