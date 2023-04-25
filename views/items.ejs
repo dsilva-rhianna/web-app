@@ -13,7 +13,10 @@
 <body class="nav-wrapper deep-purple lighten-5">
     <nav>
         <div class="nav-wrapper deep-purple lighten-2">
-          <a href="#" class = "brand-logo grey-text text-lighten-3" style = "font-family:'Trebuchet MS'">P O C K E T</a>
+            <a href="#" class = "brand-logo grey-text text-lighten-3" style = "font-family:'Trebuchet MS'">
+                <i class="material-icons left">spa</i>
+                P O C K E T
+            </a>
           <ul id="nav-mobile" class="right hide-o`n-med-and-down ">
             <li><a href="/" class = "grey-text text-lighten-3" style = "font-family:'Trebuchet MS'; font-size:20px">Home</a></li>
             <li><a href="/items" class = "grey-text text-lighten-3" style = "font-family:'Trebuchet MS'; font-size:20px">Frogs</a></li>
@@ -35,74 +38,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td style = "font-family:'Courier'; font-size:13px">Adamantis</td>
-                        <td style = "font-family:'Courier'; font-size:13px">Emerald</td>
-                        <td style = "font-family:'Courier'; font-size:13px">Folium</td>
-                        <td style = "font-family:'Courier'; font-size:13px">Common</td>
-                        <td style = "font-family:'Courier'; font-size:13px">5</td>
-                        <td>
-                            <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px" href="/items/details" onclick="localStorage.setItem('section', 'section1')">
-                                <i class="material-icons right">edit</i>
-                                Info/Edit
-                            </a>
-                            <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px">
-                                <i class="material-icons right">delete</i>
-                                Delete
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style = "font-family:'Courier'; font-size:13px">Dextera</td>
-                        <td style = "font-family:'Courier'; font-size:13px">Purple</td>
-                        <td style = "font-family:'Courier'; font-size:13px">Tingo</td>
-                        <td style = "font-family:'Courier'; font-size:13px">Rare</td>
-                        <td style = "font-family:'Courier'; font-size:13px">3</td>
-                        <td>
-                            <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px" href="/items/details" onclick="localStorage.setItem('section', 'section2')">
-                                <i class="material-icons right">edit</i>
-                                Info/Edit
-                            </a>
-                            <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px">
-                                <i class="material-icons right">delete</i>
-                                Delete
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style = "font-family:'Courier'; font-size:13px">Pluma</td>
-                        <td style = "font-family:'Courier'; font-size:13px">Maroon</td>
-                        <td style = "font-family:'Courier'; font-size:13px">Albeo</td>
-                        <td style = "font-family:'Courier'; font-size:13px">Legendary</td>
-                        <td style = "font-family:'Courier'; font-size:13px">1</td>
-                        <td>
-                            <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px" href="/items/details" onclick="localStorage.setItem('section', 'section3')">
-                                <i class="material-icons right">edit</i>
-                                Info/Edit
-                            </a>
-                            <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px">
-                                <i class="material-icons right">delete</i>
-                                Delete
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style = "font-family:'Courier'; font-size:13px">Viduo</td>
-                        <td style = "font-family:'Courier'; font-size:13px">Olive</td>
-                        <td style = "font-family:'Courier'; font-size:13px">Pruni</td>
-                        <td style = "font-family:'Courier'; font-size:13px">Rare</td>
-                        <td style = "font-family:'Courier'; font-size:13px">1</td>
-                        <td>
-                            <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px" href="/items/details" onclick="localStorage.setItem('section', 'section4')">
-                                <i class="material-icons right">edit</i>
-                                Info/Edit
-                            </a>
-                            <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px">
-                                <i class="material-icons right">delete</i>
-                                Delete
-                            </a>
-                        </td>
-                    </tr>
+                    <% for (let i = 0; i < inventory.length; i++) { %>
+                        <tr>
+                            <td style = "font-family:'Courier'; font-size:13px"><%= inventory[i].breed %></td>
+                            <td style = "font-family:'Courier'; font-size:13px"><%= inventory[i].base %></td>
+                            <td style = "font-family:'Courier'; font-size:13px"><%= inventory[i].secondary %></td>
+                            <td style = "font-family:'Courier'; font-size:13px"><%= inventory[i].rarity %></td>
+                            <td style = "font-family:'Courier'; font-size:13px"><%= inventory[i].quantity %></td>
+                            <td>
+                                <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px" href=<%= "/items/details/" + inventory[i].id %> ><i
+                                    class="material-icons right">edit</i>Info/Edit</a>
+                                <a class="btn-small waves-effect waves-light deep-purple lighten-2 grey-text text-lighten-3" style = "font-family:'Courier'; font-size:15px" href="/items/details/<%= inventory[i].id %>/delete"><i
+                                    class="material-icons right">delete</i>Delete</a>
+                            </td>
+                        </tr>
+                    <% } %>
                 </tbody>
             </table>
             <div class = "button" style = "padding-top:20px">
@@ -114,7 +64,7 @@
             <div class="modal" id="add">
                 <div class="modal-content">
                     <h2 class = "center grey-text text-darken-2" style = "font-family:'Trebuchet MS'">Add Frog:</h2>
-                    <form>
+                    <form method="post" action="/items">
                         <div class="row">
                             <div class="input-field col s4">
                                 <label for="breedInput" style = "font-family:'Courier'">Breed:</label>
