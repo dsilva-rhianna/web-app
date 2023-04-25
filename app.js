@@ -1,10 +1,19 @@
 //set up the server
 const DEBUG = true;
 const express = require( "express" );
-const app = express();
-const port = 8080;
 const logger = require("morgan");
-const db = require('./db/db_connection');
+const db = require('./db/db_pool');
+const helmet = require("helmet");
+const app = express();
+const port = process.env.PORT || 8080;
+app.use(helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", 'cdnjs.cloudflare.com']
+      }
+    }
+}));
 
 // Configure Express to use EJS
 app.set( "views",  __dirname + "/views");
